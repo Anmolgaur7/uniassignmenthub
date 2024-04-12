@@ -13,32 +13,29 @@ function Slider() {
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setCurrentReview((currentReview + 1) % 4);
+            setCurrentReview((currentReview + 1) % reviews.length);
         }, 3000);
         return () => clearInterval(interval);
     }, [currentReview]);
 
     const nextSlide = () => {
-        setCurrentReview((prevIndex) => (prevIndex + 1) % reviews.length);
+        setCurrentReview((currentReview + 1) % reviews.length);
+
     };
 
     const prevSlide = () => {
-        setCurrentReview((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length);
+        setCurrentReview((currentReview - 1) % reviews.length);
+
     };
 
     return (
-        <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-24">
+        <div className="mx-auto max-w-[1340px] px-4 py-12 sm:px-6 lg:me-0 lg:py-16 lg:pe-0 lg:ps-8 xl:py-28">
             <div className="grid grid-cols-1 gap-8 lg:grid-cols-3 lg:items-center lg:gap-16">
                 <div className="max-w-xl text-center ltr:sm:text-left rtl:sm:text-right">
-                    <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                        Don't just take our word for it...
+                    <h2 className="text-6xl font-extrabold tracking-tight  text-gray-900 ">
+                        What people are saying <p className='text-sky-500'>about</p> us? 
                     </h2>
-
-                    <p className="mt-4 text-gray-700">
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptas veritatis illo placeat
-                        harum porro optio fugit a culpa sunt id!
-                    </p>
-
+                    <p className='p-5 text-xl font-normal'>At Uniassignmenthub, we take pride in delivering top-quality assignments that exceed our clients' expectations. But don't just take our word for it. Here's what some of our satisfied clients have to say:</p>
                     <div className="hidden lg:mt-8 lg:flex lg:gap-4">
                         <button
                             aria-label="Previous slide"
@@ -84,13 +81,13 @@ function Slider() {
                     </div>
                 </div>
 
-                <div className="-mx-6 lg:col-span-2 lg:mx-0">
+                <div className="-mx-6 lg:col-span-2 lg:mx-0 ">
                     <div className="keen-slider">
                         {
                             <div className={`keen-slider__slide`}>
                                 <blockquote className="flex h-full flex-col justify-between bg-white p-6 shadow-sm sm:p-8 lg:p-12">
                                     <div>
-                                        <div className="flex gap-0.5 text-green-500">
+                                        <div className="flex  pl-10 pt-10 bg-slate-200 text-green-500">
                                             {[...Array(5)].map((_, i) => (
                                                 <svg
                                                     key={i}
@@ -105,21 +102,12 @@ function Slider() {
                                                 </svg>
                                             ))}
                                         </div>
-                                        <div className="mt-4">
-                                            <p className="text-2xl font-bold text-sky-500 sm:text-3xl">{currentReview.title}</p>
+                                        <div className=" shadow-lg pl-10 bg-slate-200">
+                                            <p className="text-2xl font-bold text-sky-500 sm:text-3xl">{reviews[currentReview].title}</p>
 
-                                            <p className="mt-4 leading-relaxed text-gray-700">{currentReview.content}</p>
-                                        </div>
-                                        <div className="mt-4">
-                                            <p className="text-2xl font-bold text-sky-500 sm:text-3xl">{currentReview.title}</p>
-
-                                            <p className="mt-4 leading-relaxed text-gray-700">{currentReview.content}</p>
+                                            <p className="mt-4 leading-relaxed pb-10 text-gray-700">{reviews[currentReview].content}</p>
                                         </div>
                                     </div>
-
-                                    <footer className="mt-4 text-sm font-medium text-gray-700 sm:mt-6">
-                                        &mdash; {currentReview.author}
-                                    </footer>
                                 </blockquote>
                             </div>
                         }
