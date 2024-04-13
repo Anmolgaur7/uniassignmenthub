@@ -1,6 +1,6 @@
-import React from 'react';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FaRegArrowAltCircleUp, FaWhatsapp } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 function Footer() {
     const [isVisible, setIsVisible] = useState(false);
@@ -25,29 +25,35 @@ function Footer() {
             behavior: 'smooth'
         });
     };
+
     return (
-        <footer className="bg-gray-900 text-white py-12 relative">
+        <footer className="bg-gray-900 text-white py-16 relative">
             <div className="container mx-auto px-4">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
                     <div className="md:col-span-2 lg:col-span-2">
-                        <div className="bg-gray-800 p-6 rounded-lg text-center">
+                        <div className="bg-gray-800 p-8 rounded-lg text-center">
                             <img src="/logo.svg" alt="Logo" className="h-12 w-12 mb-4" />
+                            <p className="text-base mb-4">Subscribe to our newsletter for the latest updates!</p>
+                            <div className="flex justify-center">
+                                <input type="email" placeholder="Your email" className="px-4 py-2 w-full rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                                <button className="ml-2 px-6 py-2 bg-sky-500 text-white rounded-lg hover:bg-orange-400 focus:outline-none focus:ring-2 focus:ring-blue-500">Subscribe</button>
+                            </div>
                         </div>
                     </div>
                     <div>
-                        <h3 className="text-xl font-semibold mb-4 text-sky-500">Quick Links</h3>
+                        <h3 className="text-xl font-semibold mb-6 text-sky-500">Quick Links</h3>
                         <ul className="list-none">
-                            <li className="mb-2"><a href="#" className="hover:text-orange-400 transition-colors duration-300">Home</a></li>
-                            <li className="mb-2"><a href="#" className="hover:text-orange-400 transition-colors duration-300">Services</a></li>
-                            <li className="mb-2"><a href="#" className="hover:text-orange-400 transition-colors duration-300">Contact Us</a></li>
+                            <li className="mb-4"><Link to="/" className="hover:text-orange-400 transition-colors duration-300 text-lg">Home</Link></li>
+                            <li className="mb-4"><Link to="/about" className="hover:text-orange-400 transition-colors duration-300 text-lg">Services</Link></li>
+                            <li className="mb-4"><Link to="/contact" className="hover:text-orange-400 transition-colors duration-300 text-lg">Contact Us</Link></li>
                         </ul>
                     </div>
                     <div>
-                        <h3 className="text-xl font-semibold mb-4 text-sky-500">Contact Us</h3>
+                        <h3 className="text-xl font-semibold mb-6 text-sky-500">Contact Us</h3>
                         <ul className="list-none">
-                            <li className="mb-2">123 Street Name, City, Country</li>
-                            <li className="mb-2">info@example.com</li>
-                            <li className="mb-2">+123 456 7890</li>
+                            <li className="mb-4">123 Street Name, City, Country</li>
+                            <li className="mb-4">info@example.com</li>
+                            <li className="mb-4">+123 456 7890</li>
                         </ul>
                     </div>
                 </div>

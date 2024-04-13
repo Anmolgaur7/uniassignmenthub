@@ -3,7 +3,7 @@ import React from 'react'
 function About() {
     return (
         <div>
-            <header className='relative w-full h-[40.90rem] flex  flex-col md:flex-col lg:flex-row '>
+            <header className='relative w-full h-auto flex lg:h-[40.78rem] flex-col md:flex-col lg:flex-row '>
                 <div className='absolute inset-0 bg-Landing3 bg-cover bg-center'></div>
                 <div className='absolute inset-0 bg-black opacity-50'></div>
                 <div className='flex flex-col relative justify-center items-center sm:items-start px-6 sm:px-12 md:px-24 lg:px-36  h-full text-white'>
@@ -11,7 +11,7 @@ function About() {
                         Know about <span className='text-sky-500'>us</span>
                     </h1>
                 </div>
-                <form className='flex flex-col relative items-center justify-center w-full md:w-auto bg-gray-800 bg-opacity-70 rounded-lg p-8'>
+                <form className='flex flex-col relative items-center flex-wrap justify-center w-full md:w-auto bg-gray-800 bg-opacity-70 rounded-lg p-8'>
                     <div>
                         <h1 className='text-5xl font font-semibold text-white'>Leave a Reply</h1>
                         <br />
@@ -21,7 +21,7 @@ function About() {
                     <input className='w-80 h-12 p-3 border border-gray-400 rounded-md mb-4 text-lg sm:text-xl' type='text' placeholder='Enter your name' />
                     <input className='w-80 h-12 p-3 border border-gray-400 rounded-md mb-4 text-lg sm:text-xl' type='email' placeholder='Enter your email' />
                     <input className='w-80 h-12 p-3 border border-gray-400 rounded-md mb-4 text-lg sm:text-xl' type='number' placeholder='Enter your mobile-no' />
-                    <textarea name="" id="" cols="30" rows="10" placeholder='Enter you comment' className='w-80 min-h-[7rem] max-h-[7rem] p-4'></textarea>
+                    <textarea name="" id="" cols="30" rows="10" placeholder='Enter you comment' className='w-80 min-h-[5rem] max-h-[5rem] md:min-h-[6rem] md:max-h-[6rem] lg:min-h-[7rem] lg:max-h-[7rem] p-4'></textarea>
                     <button className='bg-sky-500 mt-8 text-white px-6 py-3 rounded-md text-lg sm:text-xl font-semibold hover:bg-sky-400'>Post a Comment</button>
                 </form>
             </header>
