@@ -8,6 +8,7 @@ import Footer from './Components/Footer.jsx';
 import Login from './Pages/Login.jsx';
 import Signup from './Pages/Signup.jsx';
 import Samples from './Pages/Samples.jsx';
+import Blog from './Pages/Blog.jsx';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
     <Route path='/login' element={<Login/>}/>
     <Route path='/signup' element={<Signup/>}/>
     <Route path='/sample' element={<Samples/>}/>
+    <Route path='/blog' element={<Blog/>}/>
     </Routes>   
     <Footer/>
     </BrowserRouter>

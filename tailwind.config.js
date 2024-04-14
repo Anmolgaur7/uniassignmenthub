@@ -10,6 +10,7 @@ module.exports = {
         'Landing2': "url('/src/Images/bg2.jpg')",
         'Landing3': "url('/src/Images/bg3.jpeg')",
         'log': "url('/src/Images/bg2.gif')",
+        'log1': "url('/src/Images/bggg.png')",
       }
     },
   },
