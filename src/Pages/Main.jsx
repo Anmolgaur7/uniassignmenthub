@@ -7,6 +7,7 @@ import i5 from "../Images/i5.gif";
 import i6 from "../Images/i6.gif";
 import Services from '../Components/Services';
 import Testemonils from '../Components/Testemonils';
+import {Link} from 'react-router-dom';
 
 
 function Main() {
@@ -28,7 +29,8 @@ function Main() {
             <option value='professional-writing'>Professional Writing</option>
             <option value='academic-writing'>Academic Writing</option>
           </select>
-          <button className='bg-sky-500 text-white px-6 py-3 rounded-md text-lg sm:text-xl font-semibold hover:bg-sky-400'>Get a Quote</button>
+          <button className='bg-sky-500 text-white px-6 py-3 rounded-md text-lg sm:text-xl font-semibold hover:bg-sky-400'>
+            <Link to="/submitform">Get a Quote</Link></button>
         </form>
       </header>
       <div className='flex justify-center items-center gap flex-wrap px-4 sm:px-0'>

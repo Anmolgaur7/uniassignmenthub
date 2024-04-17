@@ -28,16 +28,16 @@ const Samples = () => {
         <div className="mx-auto relative max-w-[1340px] px-4 sm:px-6 lg:px-8 xl:px-0 py-12 sm:py-16 lg:py-24">
           <div className="mb-8 text-center lg:text-left">
             <h1 className='text-4xl flex   flex-wrap justify-center items-center sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl font-extrabold text-center'>
-              Downloadable<span className='text-sky-500 ml-2 lg:ml-4'>Samples</span>
+            Available<span className='text-sky-500 ml-2 lg:ml-4'>Samples</span>
             </h1>
-            <p className="mt-2 text-lg sm:text-xl lg:text-2xl font-semibold text-gray-700">Unleash your creativity with our exclusive collection of downloadable samples.</p>
+            <p className="mt-4 text-lg sm:text-xl lg:text-2xl font-semibold text-gray-700">Unleash your creativity with our exclusive collection of Available samples.</p>
           </div>
         </div>
       </header>
 
       <div className="grid grid-cols-1 p-20 gap-6 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
         {samples.map((sample, index) => (
-          <div key={index} className="p-6 bg-white shadow rounded-lg">
+          <div key={index} className="p-6 bg-orange-200 shadow-2xl rounded-lg">
             <div className="flex justify-between mb-4">
               <h3 className="text-lg font-semibold text-gray-800">{sample.title}</h3>
               <span className="text-sm font-semibold text-gray-600">{sample.type}</span>

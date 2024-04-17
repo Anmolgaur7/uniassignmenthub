@@ -6,11 +6,10 @@ import { Link, useLocation } from 'react-router-dom';
 function Navbar() {
   const [showLinks, setShowLinks] = useState(false);
   const location = useLocation();
-
   return (
     <>
       {/* Navbar for larger devices */}
-      <nav className='hidden sm:flex justify-between shadow-xl bg-fixed bg-gradient-to-b from-black to-green1 backdrop-blur-xl'>
+      <nav className='hidden sm:flex justify-between shadow-xl bg-fixed bg-gradient-to-r from-gray-400 to-stone-800 backdrop-blur-xl'>
         <div className='flex justify-center items-center'>
           <Link to='/'>
             <img src="" alt="" className='w-16 h-16 bg-black mt-3 mb-3 mr-6 ml-3 md:w-18 md:h-18 rounded-full' />
@@ -64,6 +63,7 @@ function Navbar() {
 // Component to handle navigation items and apply active styling
 const NavItem = ({ to, currentPath, children }) => {
   const isActive = currentPath === to;
+  console.log(isActive, currentPath, to);
   return (
     <li
       className={`text-xl md:text-xl font-bold font-mono mr-[4rem] text-white cursor-pointer ${

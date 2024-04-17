@@ -9,6 +9,7 @@ import Login from './Pages/Login.jsx';
 import Signup from './Pages/Signup.jsx';
 import Samples from './Pages/Samples.jsx';
 import Blog from './Pages/Blog.jsx';
+import Submitform from './Components/Submitform.jsx';
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
     <Route path='/about' element={<About/>}/>
     <Route path='/login' element={<Login/>}/>
     <Route path='/signup' element={<Signup/>}/>
+    <Route path='/submitform' element={<Submitform/>}/>
     <Route path='/sample' element={<Samples/>}/>
     <Route path='/blog' element={<Blog/>}/>
     </Routes>   
